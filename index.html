@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>TODO LIST</title>
+</head>
+
+<body>
+    <div class="package">
+        <h1 class="todolist__title">TODO LIST</h1>
+        <div class="todolist">
+            <div class="todolist__bar"><input type="text" id="text" class="todolist__text" placeholder="  請輸入待辦事項">
+                <button class="todolist__addButton" id="addButton">+</button>
+            </div>
+
+            <div class="todolist__state">
+                <div class="todolist__tabBar" id="tab">
+                    <p class="todolist__tab action" id="all">全部</p>
+                    <p class="todolist__tab" id="next">待完成</p>
+                    <p class="todolist__tab" id="done">已完成</p>
+                </div>
+            </div>
+            <div class="content" id="content">
+
+            </div>
+            <div class="footer">
+                <p class="footer__item" id="itemNum">總共有0個項目</p>
+                <button class="footer__allDelete" id="allDelete">清除已完成項目</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+
+</html>
