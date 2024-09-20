@@ -16,7 +16,7 @@ body {
 .package {
   display: block;
   text-align: center;
-  margin-bottom: 50px;
+  margin: 100px 0;
 }
 
 .todolist {
@@ -26,11 +26,11 @@ body {
   width: 500px;
   margin: 50px;
   border-radius: 50px;
-  background-color: rgb(200, 255, 0);
-  box-shadow: 15px 15px rgba(11, 131, 0, 0.733);
+  border: solid 1px rgb(170, 170, 170);
+  box-shadow: 15px 15px rgba(11, 131, 0, 0.877);
 }
 .todolist__title {
-  margin: 80px;
+  margin-bottom: 60px;
   font-size: 60px;
 }
 .todolist__bar {
@@ -74,7 +74,7 @@ body {
 }
 
 .todolist__addButton:hover {
-  box-shadow: 5px 5px rgba(11, 131, 0, 0.733);
+  box-shadow: 5px 5px rgba(10, 99, 2, 0.733);
 }
 
 .content {
@@ -96,6 +96,7 @@ body {
   color: rgb(255, 187, 0);
 }
 .content__text {
+  word-wrap: break-word;
   text-align: left;
   width: 300px;
   font-size: 20px;
@@ -114,7 +115,7 @@ body {
 }
 
 .content__delete:hover {
-  box-shadow: 5px 5px rgba(11, 131, 0, 0.733);
+  box-shadow: 5px 5px rgb(16, 75, 11);
 }
 
 .footer {

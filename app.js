@@ -3,8 +3,9 @@ const addButton = document.getElementById("addButton");
 const deleteButton = document.getElementById("delete");
 const list = document.getElementById("content");
 const itemNum = document.getElementById("itemNum");
-let data = [];
+let data = JSON.parse(localStorage.getItem("todos")) || [];
 let tabState = "all";
+updateList();
 function renderData(data) {
   const str = data.reduce((accumulator, item, index) => {
     return (
@@ -39,6 +40,7 @@ function addItem(e) {
   data.push(obj);
   text.value = "";
   updateList();
+  saveToLocalStorage();
 }
 text.addEventListener("keypress", function (e) {
   if (e.key === "Enter") {
@@ -58,6 +60,7 @@ function deleteItem(e) {
     if (confirm("您確定要刪除代辦嗎?")) {
       data.splice(num, 1);
       updateList();
+      saveToLocalStorage();
     }
   } else if (e.target.getAttribute("type") === "checkbox") {
     data.forEach((item) => {
@@ -66,6 +69,7 @@ function deleteItem(e) {
       }
     });
     updateList();
+    saveToLocalStorage();
   } else {
     return;
   }
@@ -80,6 +84,7 @@ tab.addEventListener("click", function (e) {
   tabs.forEach((i) => i.classList.remove("action"));
   e.target.classList.add("action");
   updateList();
+  saveToLocalStorage();
 });
 
 function updateList() {
@@ -105,4 +110,8 @@ allDelete.addEventListener("click", function (e) {
   e.preventDefault();
   data = data.filter((item) => !item.checked);
   updateList();
+  saveToLocalStorage();
 });
+function saveToLocalStorage() {
+  localStorage.setItem("todos", JSON.stringify(data));
+}
