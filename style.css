@@ -17,8 +17,9 @@ body {
 }
 
 .todolist {
+  width: 250px;
+  margin: auto;
   padding: 30px;
-  margin: 20px;
   border-radius: 50px;
   border: solid 1px rgb(170, 170, 170);
   box-shadow: 15px 15px rgba(11, 131, 0, 0.877);
@@ -26,7 +27,6 @@ body {
 @media (min-width: 750px) {
   .todolist {
     width: 500px;
-    margin: auto;
   }
 }
 .todolist__title {
@@ -52,19 +52,22 @@ body {
 }
 @media (min-width: 750px) {
   .todolist__text {
-    height: 30px;
     font-size: 20px;
   }
 }
 .todolist__addButton {
-  width: 40px;
-  height: 40px;
   background-color: black;
   color: antiquewhite;
   font-weight: bold;
   font-size: 20px;
   border-radius: 100px;
   transition: box-shadow 0.5s;
+}
+@media (min-width: 750px) {
+  .todolist__addButton {
+    width: 40px;
+    height: 40px;
+  }
 }
 .todolist__state {
   display: flex;
@@ -73,7 +76,12 @@ body {
 .todolist__tabBar {
   display: flex;
   justify-content: space-around;
-  border-bottom: solid 2px black;
+  border-bottom: solid 1px black;
+}
+@media (min-width: 750px) {
+  .todolist__tabBar {
+    border-bottom: solid 2px black;
+  }
 }
 .todolist__tab {
   width: 80px;
@@ -87,8 +95,10 @@ body {
   }
 }
 
-.todolist__addButton:hover {
-  box-shadow: 5px 5px rgba(10, 99, 2, 0.733);
+@media (min-width: 750px) {
+  .todolist__addButton:hover {
+    box-shadow: 5px 5px rgba(10, 99, 2, 0.733);
+  }
 }
 
 .content {
@@ -106,12 +116,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 10px;
+  margin: 20px 10px 10px 10px;
 }
 @media (min-width: 750px) {
   .content__checkboxBar {
     justify-content: start;
     width: 500px;
+    margin: 10px;
   }
 }
 .content__checkbox {
@@ -123,15 +134,17 @@ body {
   word-wrap: break-word;
   text-align: left;
   width: 300px;
-  font-size: 20px;
+  font-size: 15px;
   font-weight: bold;
   margin: 10px;
-  padding-bottom: 10px;
+  padding-bottom: 5px;
   border-bottom: solid 1px rgb(97, 97, 97);
 }
 @media (min-width: 750px) {
   .content__text {
     margin: 0 50px 0 20px;
+    padding-bottom: 10px;
+    font-size: 20px;
   }
 }
 .content__delete {
@@ -147,25 +160,40 @@ body {
   }
 }
 
-.content__delete:hover {
-  box-shadow: 5px 5px rgb(16, 75, 11);
+@media (min-width: 750px) {
+  .content__delete:hover {
+    box-shadow: 5px 5px rgb(16, 75, 11);
+  }
 }
 
 .footer {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+  display: block;
   padding-top: 20px;
 }
+@media (min-width: 750px) {
+  .footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
 .footer__allDelete {
-  padding: 10px;
+  margin: 5px;
+  padding: 5px;
   background-color: black;
   color: antiquewhite;
-  font-size: 15px;
   border-radius: 100px;
   transition: box-shadow 0.5s;
 }
+@media (min-width: 750px) {
+  .footer__allDelete {
+    padding: 10px;
+    font-size: 15px;
+  }
+}
 
-.footer__allDelete:hover {
-  box-shadow: 5px 5px rgba(11, 131, 0, 0.733);
+@media (min-width: 750px) {
+  .footer__allDelete:hover {
+    box-shadow: 5px 5px rgba(11, 131, 0, 0.733);
+  }
 }/*# sourceMappingURL=style.css.map */
