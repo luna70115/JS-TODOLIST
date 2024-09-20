@@ -1,0 +1,33 @@
+$break-point-flat: 970px;
+$break-point-tablet: 750px;
+$break-point-desktop: 1300px;
+
+$fontStyle: "Nerko One", cursive;
+$fontTitle: "Bevan", serif;
+$caratPink: #f7cac9;
+$caratBlue: #92a8d1;
+
+@mixin tablet {
+  @media (min-width: $break-point-tablet) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $break-point-desktop) {
+    @content;
+  }
+}
+
+@mixin flat {
+  @media (min-width: $break-point-flat) {
+    @content;
+  }
+}
+
+@mixin gradient-text {
+  background: var(--primary-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}

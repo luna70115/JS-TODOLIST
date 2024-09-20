@@ -1,7 +1,4 @@
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -20,18 +17,27 @@ body {
 }
 
 .todolist {
-  display: block;
-  text-align: center;
   padding: 30px;
-  width: 500px;
-  margin: 50px;
+  margin: 20px;
   border-radius: 50px;
   border: solid 1px rgb(170, 170, 170);
   box-shadow: 15px 15px rgba(11, 131, 0, 0.877);
 }
+@media (min-width: 750px) {
+  .todolist {
+    width: 500px;
+    margin: auto;
+  }
+}
 .todolist__title {
-  margin-bottom: 60px;
-  font-size: 60px;
+  margin-bottom: 30px;
+  font-size: 40px;
+}
+@media (min-width: 750px) {
+  .todolist__title {
+    margin-bottom: 60px;
+    font-size: 60px;
+  }
 }
 .todolist__bar {
   display: flex;
@@ -40,11 +46,15 @@ body {
 }
 .todolist__text {
   padding: 10px;
-  height: 30px;
   margin: 20px;
   width: 350px;
-  font-size: 20px;
   border-radius: 50px;
+}
+@media (min-width: 750px) {
+  .todolist__text {
+    height: 30px;
+    font-size: 20px;
+  }
 }
 .todolist__addButton {
   width: 40px;
@@ -68,9 +78,13 @@ body {
 .todolist__tab {
   width: 80px;
   border-radius: 100px;
-  margin: 20px;
-  padding: 5px;
   font-weight: bold;
+}
+@media (min-width: 750px) {
+  .todolist__tab {
+    padding: 5px;
+    margin: 20px;
+  }
 }
 
 .todolist__addButton:hover {
@@ -81,14 +95,24 @@ body {
   display: block;
   align-items: center;
   list-style: none;
-  margin: 30px;
+  margin: 0 5px;
+}
+@media (min-width: 750px) {
+  .content {
+    margin: 30px;
+  }
 }
 .content__checkboxBar {
   display: flex;
-  justify-content: start;
+  justify-content: center;
   align-items: center;
-  width: 500px;
   margin: 10px;
+}
+@media (min-width: 750px) {
+  .content__checkboxBar {
+    justify-content: start;
+    width: 500px;
+  }
 }
 .content__checkbox {
   width: 20px;
@@ -101,17 +125,26 @@ body {
   width: 300px;
   font-size: 20px;
   font-weight: bold;
-  margin: 0 50px 0 20px;
+  margin: 10px;
   padding-bottom: 10px;
   border-bottom: solid 1px rgb(97, 97, 97);
+}
+@media (min-width: 750px) {
+  .content__text {
+    margin: 0 50px 0 20px;
+  }
 }
 .content__delete {
   background-color: black;
   color: antiquewhite;
   font-weight: bold;
-  font-size: 20px;
   border-radius: 100px;
   transition: box-shadow 0.5s;
+}
+@media (min-width: 750px) {
+  .content__delete {
+    font-size: 20px;
+  }
 }
 
 .content__delete:hover {
@@ -128,7 +161,6 @@ body {
   padding: 10px;
   background-color: black;
   color: antiquewhite;
-  font-weight: bold;
   font-size: 15px;
   border-radius: 100px;
   transition: box-shadow 0.5s;

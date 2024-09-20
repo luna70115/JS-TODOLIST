@@ -1,7 +1,5 @@
+@import "_variable.scss";
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -17,17 +15,24 @@ body {
   margin: 100px 0;
 }
 .todolist {
-  display: block;
-  text-align: center;
   padding: 30px;
-  width: 500px;
-  margin: 50px;
+  margin: 20px;
+
   border-radius: 50px;
   border: solid 1px rgb(170, 170, 170);
   box-shadow: 15px 15px rgba(11, 131, 0, 0.877);
+  @include tablet {
+    width: 500px;
+    margin: auto;
+  }
   &__title {
-    margin-bottom: 60px;
-    font-size: 60px;
+    margin-bottom: 30px;
+    font-size: 40px;
+
+    @include tablet {
+      margin-bottom: 60px;
+      font-size: 60px;
+    }
   }
   &__bar {
     display: flex;
@@ -36,11 +41,15 @@ body {
   }
   &__text {
     padding: 10px;
-    height: 30px;
+
     margin: 20px;
     width: 350px;
-    font-size: 20px;
+
     border-radius: 50px;
+    @include tablet {
+      height: 30px;
+      font-size: 20px;
+    }
   }
   &__addButton {
     width: 40px;
@@ -66,9 +75,11 @@ body {
   &__tab {
     width: 80px;
     border-radius: 100px;
-    margin: 20px;
-    padding: 5px;
     font-weight: bold;
+    @include tablet {
+      padding: 5px;
+      margin: 20px;
+    }
   }
 }
 
@@ -80,13 +91,19 @@ body {
   display: block;
   align-items: center;
   list-style: none;
-  margin: 30px;
+  margin: 0 5px;
+  @include tablet {
+    margin: 30px;
+  }
   &__checkboxBar {
     display: flex;
-    justify-content: start;
+    justify-content: center;
     align-items: center;
-    width: 500px;
     margin: 10px;
+    @include tablet {
+      justify-content: start;
+      width: 500px;
+    }
   }
   &__checkbox {
     width: 20px;
@@ -99,22 +116,29 @@ body {
     width: 300px;
     font-size: 20px;
     font-weight: bold;
-    margin: 0 50px 0 20px;
+    margin: 10px;
     padding-bottom: 10px;
     border-bottom: solid 1px rgb(97, 97, 97);
+    @include tablet {
+      margin: 0 50px 0 20px;
+    }
   }
   &__delete {
     background-color: black;
     color: antiquewhite;
     font-weight: bold;
-    font-size: 20px;
+
     border-radius: 100px;
     transition: box-shadow 0.5s;
+    @include tablet {
+      font-size: 20px;
+    }
   }
 }
 .content__delete:hover {
   box-shadow: 5px 5px rgb(16, 75, 11);
 }
+
 .footer {
   display: flex;
   justify-content: space-around;
@@ -125,7 +149,7 @@ body {
     padding: 10px;
     background-color: black;
     color: antiquewhite;
-    font-weight: bold;
+
     font-size: 15px;
     border-radius: 100px;
     transition: box-shadow 0.5s;
